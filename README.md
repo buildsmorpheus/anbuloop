@@ -93,6 +93,10 @@ This section is the source of truth for provider-validation claims. Update it in
 
 This is a hackathon prototype, not a production private-data service. The upload screen requires confirmation that everyone recorded has permitted storage and processing. The delete controls remove browser-local exchange data and transcript state. Production retention, identity, and storage controls are future work.
 
+## License
+
+Copyright © 2026 Morpheus Vibaen. All rights reserved. This repository is source-available for hackathon review, but it is not open source and may not be used, copied, modified, distributed, or commercialized without prior written permission. See [LICENSE](LICENSE).
+
 ## Vocabulary rules
 
 - A phrase begins as **new** until a child makes the first reply attempt.
