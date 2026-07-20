@@ -113,3 +113,5 @@ This is a hackathon prototype, not a production private-data service. The upload
 ## Submission and roadmap
 
 See [SUBMISSION.md](SUBMISSION.md) for paste-ready hackathon copy, a final recording checklist, and the explicitly future roadmap. The roadmap is not current product behavior.
+
+For the detailed post-hackathon plan, see [docs/FUTURE_FEATURES.md](docs/FUTURE_FEATURES.md). It separates planned family controls, child learning, AI validation, tutors, and the later retired-educator opportunity from the submitted MVP.
