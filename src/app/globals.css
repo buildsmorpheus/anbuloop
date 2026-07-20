@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #fffaf2;
+  --ink: #263232;
+  --muted: #64716e;
+  --clay: #b65a42;
+  --sun: #f4c86e;
+  --mint: #dcece4;
+  --line: #e8ded1;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+button, input, select { font: inherit; }
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.button:hover { transform: translateY(-1px); }
+.button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #94c8b4; outline-offset: 3px; }
+.button-primary { background: var(--ink); color: white; box-shadow: 0 8px 22px rgb(38 50 50 / 16%); }
+.button-secondary { border: 1px solid var(--line); background: white; color: var(--ink); }
+.button-danger { border: 1px solid #eab8a9; background: #fff5f1; color: #9a3c2e; }
+
+.app-shell { min-height: 100dvh; background: linear-gradient(135deg, #fffaf2 0%, #f5eee5 100%); }
+.app-main { margin: 0 auto; width: 100%; max-width: 920px; padding: 1.5rem; }
+@media (min-width: 640px) { .app-main { padding: 2.5rem; } }
+
+.card { border: 1px solid var(--line); border-radius: 1.25rem; background: rgb(255 255 255 / 85%); padding: 1.25rem; box-shadow: 0 8px 30px rgb(94 70 42 / 5%); }
+.eyebrow { color: var(--clay); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; }
+.field-label { display: block; margin-bottom: 0.45rem; color: var(--ink); font-size: 0.85rem; font-weight: 700; }
+.field { width: 100%; border: 1px solid var(--line); border-radius: 0.8rem; background: white; padding: 0.7rem 0.75rem; color: var(--ink); }
+.pill { display: inline-flex; align-items: center; border-radius: 999px; background: var(--mint); padding: 0.28rem 0.65rem; color: #386355; font-size: 0.75rem; font-weight: 700; }
